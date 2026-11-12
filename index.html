@@ -133,12 +133,6 @@
           </aside>
         </div>
         <div class="calendar-admin">
-          <button class="gold-button calendar-edit-toggle" type="button" id="calendar-edit-toggle">EDIT CALENDAR</button>
-          <div class="calendar-admin-actions" id="calendar-admin-actions" hidden>
-            <button class="calendar-action" type="button" id="calendar-add">ADD EVENT</button>
-            <button class="calendar-action" type="button" id="calendar-edit">EDIT EVENT</button>
-            <button class="calendar-action calendar-delete" type="button" id="calendar-remove">REMOVE EVENT</button>
-          </div>
           <div class="calendar-filters" role="group" aria-label="Filter calendar events">
             <label><input id="calendar-filter-main" type="checkbox" checked> Main Events</label>
             <label><input id="calendar-filter-team" type="checkbox" checked> Team Calender</label>
@@ -153,72 +147,6 @@
         <div class="past-events-list" id="recent-highlights-list"></div>
         <p class="event-list-empty" id="recent-highlights-empty" hidden>No recent highlights yet.</p>
       </section>
-      <dialog class="calendar-dialog" id="calendar-code-dialog" aria-labelledby="calendar-code-title">
-        <form id="calendar-code-form">
-          <button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button>
-          <span class="section-kicker">CALENDAR ACCESS</span>
-          <h2 id="calendar-code-title">Enter edit code</h2>
-          <label for="calendar-code">Code</label>
-          <input id="calendar-code" name="code" type="password" inputmode="numeric" autocomplete="off" required>
-          <p class="dialog-error" id="calendar-code-error" role="alert"></p>
-          <button class="dialog-submit" type="submit">UNLOCK EDITING</button>
-        </form>
-      </dialog>
-      <dialog class="calendar-dialog" id="calendar-event-dialog" aria-labelledby="calendar-event-title">
-        <form id="calendar-event-form">
-          <button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button>
-          <span class="section-kicker">TEAM SCHEDULE</span>
-          <h2 id="calendar-event-title">Add event</h2>
-          <label id="calendar-event-picker-label" for="calendar-event-picker" hidden>Select event to edit</label>
-          <select id="calendar-event-picker" hidden></select>
-          <label for="calendar-event-date">Date</label>
-          <input id="calendar-event-date" name="date" type="date" required>
-          <label for="calendar-event-title-input">Event title</label>
-          <input id="calendar-event-title-input" name="title" type="text" maxlength="100" required>
-          <label for="calendar-event-time">Start time</label>
-          <input id="calendar-event-time" name="time" type="time" required>
-          <label for="calendar-event-end-time">End time</label>
-          <input id="calendar-event-end-time" name="endTime" type="time" required>
-          <p class="dialog-error" id="calendar-event-time-error" role="alert"></p>
-          <fieldset class="calendar-repeat">
-            <legend>Repeat</legend>
-            <label class="calendar-repeat-toggle"><input id="calendar-event-repeat" name="repeat" type="checkbox"> Repeat event</label>
-            <div class="calendar-repeat-options" id="calendar-repeat-options" hidden>
-              <label for="calendar-repeat-interval">Repeat every</label>
-              <div class="calendar-repeat-frequency">
-                <input id="calendar-repeat-interval" name="repeatInterval" type="number" min="1" max="365" step="1" value="1">
-                <select id="calendar-repeat-unit" name="repeatUnit" aria-label="Repeat interval unit">
-                  <option value="day">day(s)</option>
-                  <option value="week">week(s)</option>
-                  <option value="month">month(s)</option>
-                </select>
-              </div>
-              <label for="calendar-repeat-until">Repeat until</label>
-              <input id="calendar-repeat-until" name="repeatUntil" type="date">
-            </div>
-          </fieldset>
-          <p class="dialog-error" id="calendar-event-repeat-error" role="alert"></p>
-          <fieldset class="calendar-event-categories">
-            <legend>Event calendars</legend>
-            <label><input id="calendar-event-main" name="mainEvents" type="checkbox" checked> Main Events</label>
-            <label><input id="calendar-event-team" name="teamCalendar" type="checkbox" checked> Team Calender</label>
-          </fieldset>
-          <p class="dialog-error" id="calendar-event-category-error" role="alert"></p>
-          <label for="calendar-event-description">Description</label>
-          <textarea id="calendar-event-description" name="description" rows="3" required></textarea>
-          <button class="dialog-submit" type="submit">SAVE EVENT</button>
-        </form>
-      </dialog>
-      <dialog class="calendar-dialog" id="calendar-remove-dialog" aria-labelledby="calendar-remove-title">
-        <form id="calendar-remove-form">
-          <button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button>
-          <span class="section-kicker">TEAM SCHEDULE</span>
-          <h2 id="calendar-remove-title">Remove event</h2>
-          <label for="calendar-remove-picker">Select event</label>
-          <select id="calendar-remove-picker" required></select>
-          <button class="dialog-submit dialog-danger" type="submit">REMOVE SELECTED EVENT</button>
-        </form>
-      </dialog>
     </section>
 
     <section class="tab-panel" id="panel-sponsors" role="tabpanel" aria-labelledby="tab-sponsors" data-panel="sponsors" hidden>
